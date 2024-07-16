@@ -1,0 +1,25 @@
+<p>פרטי לקוח</p>
+<form [formGroup]="customerGroup" (submit)="onSubmit()">
+    <label for="name">Name: </label>
+    <input type="text" name="name" formControlName="name">
+    <label for="email">Email: </label>
+    <input type="email" name="email" formControlName="email" >
+
+
+    <label for="address">Address: </label>
+    <input type="text" name="address" formControlName="address">
+
+
+
+    <button type="submit">Submit</button>
+
+</form>
+
+
+<div *ngIf="submitted">
+    <p>פרטי לקוח</p>
+    <p>Name: {{ customerDetails.name }}</p>
+    <p>Email: {{ customerDetails.email }}</p>
+    <p>Address: {{ customerDetails.address }}</p>
+      
+</div>

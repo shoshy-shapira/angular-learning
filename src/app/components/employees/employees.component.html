@@ -1,0 +1,25 @@
+<p>פרטי עובד</p>
+<form (submit)="onSubmit()">
+    <label for="name">Name: </label>
+    <input type="text" name="name" [(ngModel)]="customerName">
+
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" [(ngModel)]="customerEmail" >
+
+
+    <label for="address">Adress: </label>
+    <input type="text" name="address" [(ngModel)]="customerAddress">
+
+
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<div *ngIf="submitted">
+    <p>פרטי עובד</p>
+    <p>Name: {{ customerName }}</p>
+    <p>Address: {{ customerAddress }}</p>
+    <p>Email: {{ customerEmail }}</p>
+</div>
