@@ -1,3 +1,29 @@
-<p>table works!</p>
-<button (click)="OnClick()">לחץ</button>
-<button (click)="getTable()">הצג הכל</button>
+<h1>table!!!</h1>
+<button (click)="getEmployee()">getEmployee</button>
+<button (click)="getEmployee()">getEmployeeById</button>
+
+
+
+<table>
+    <thead>
+        <tr>
+
+            <th>id</th>
+            <th>employee_name</th>
+            <th>employee_salary</th>
+            <th>employee_age</th>
+            <th>profile_image</th>
+    </tr>
+</thead>
+
+
+    <tbody>
+        <tr *ngFor="let data of listData" (click)="openEmployeePage(data.id)">
+            <td>{{data.id}}</td>
+            <td>{{data.employee_name}}</td>
+            <td>{{data.employee_salary}}</td>
+            <td>{{data.employee_age}}</td>
+            <td>{{data.profile_image}}</td>
+        </tr>
+
+</table>
